@@ -11,23 +11,29 @@
   <body>
     {% extends "template.html" %}
     {% block content %}
+
     <h1>TV Search!</h1>
     <h2>Enter a search term in the text box below and select an option to search by Show Title, Episode Title, or Actor Name.</h2>
+    <br>
 
     <form action="/results.html">
       <input type="text" id="searchtext" name="searchtext">
       <br>
+
       <select id="Search Type:" name="searchtype">
         <option value="show">Show Title</option>
         <option value="episode">Episode Title</option>
         <option value="actor">Actor Name</option>
       </select>
       <br>
+
       <input type="submit" value="Submit">
     </form>
     <br>
+
     <h3>Results</h3>
     <p id="results"></p>
+    
     {% endblock %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   </body>
