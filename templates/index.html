@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/app.css')}}">
+    <title>TV SEARCH!</title>
+  </head>
+
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <h1>TV Search!</h1>
+    <h2>Sample Search Results: Breaking Bad</h2>
+    <br>
+    <h3>Show Title:</h3>
+    <p>{{datum.name}}</p>
+    <br>
+    <h3>Genres:</h3>
+    <p>{{datum.genres}}</p>
+    <br>
+    <h3>Rating:</h3>
+    <p>{{datum.rating.average}}</p>
+    <img src="{{datum.image.medium}}" />
+    <br>
+    <h3>Summary:</h3>
+    <p>{{datum.summary}}</p>
+    {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  </body>
+</html>
