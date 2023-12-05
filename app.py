@@ -7,7 +7,7 @@ app = Flask(__name__)                               # create an app instance
 def home():
     return render_template("index.html")
 
-@app.route("/results")
+@app.route("/results")                              # results url
 def results():
     url = "https://api.tvmaze.com/search/shows?q=Breaking"
     response = urllib.request.urlopen(url)
@@ -15,7 +15,7 @@ def results():
     dict = json.loads(data)
     return render_template("results.html", datum=dict) 
 
-@app.route("/sample")
+@app.route("/sample")                               # sample url
 def sample():
     url = "https://api.tvmaze.com/singlesearch/shows?q=Breaking"
     response = urllib.request.urlopen(url)
