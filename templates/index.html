@@ -13,28 +13,15 @@
     {% block content %}
 
     <h1>TV Search!</h1>
-    <h2>Sample Search Results: Breaking Bad</h2>
     <br>
+    <h2>List Search</h2>
+    <h3>Enter a search query to get a list of possible matches:</h3>
+    <input type="text" id="searchTitle" placeholder="Search for a show">
+    <div id="errorMessage" style="color: red;"></div>
+    <ul id="resultsList"></ul>
 
-    <h3>Show Title:</h3>
-    <p>{{datum.name}}</p>
-    <br>
-
-    <h3>Genres:</h3>
-    <p>{{datum.genres}}</p>
-    <br>
-
-    <h3>Rating:</h3>
-    <p>{{datum.rating.average}}</p>
-    <br>
-
-    <img src="{{datum.image.medium}}" />
-    <br>
-
-    <h3>Summary:</h3>
-    <p>{{datum.summary}}</p>
-    
     {% endblock %}
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   </body>
 </html>
