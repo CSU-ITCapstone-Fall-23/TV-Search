@@ -1,0 +1,36 @@
+/* search box, drop down menu, and search button */
+
+/* Search box styling */
+.search-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+    font-size: 1em;
+}
+
+/* Drop down menu styling */
+.filter-dropdown {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+/* Search button styling */
+.search-button {
+    background-color: #777;
+    color: #ff0; /* Yellow text color */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* Hover for search button */
+.search-button:hover {
+    background-color: #555;
+}
